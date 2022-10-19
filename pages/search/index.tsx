@@ -1,6 +1,6 @@
 import style from "./index.module.css";
-const HomePage = () => {
+const SearchPage = () => {
   return <div className={style.container}></div>;
 };
 
-export default HomePage;
+export default SearchPage;
