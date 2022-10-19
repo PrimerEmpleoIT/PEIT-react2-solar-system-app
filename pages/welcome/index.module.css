@@ -1,0 +1,25 @@
+.container {
+  background-color: #151515;
+  background-image: url("../../assets/Background.png");
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 240px;
+  align-items: center;
+  height: 100vh;
+}
+.tituloContainer {
+  margin-top: 220px;
+  width: 304px;
+}
+.buttonContainer {
+  width: 206px;
+}
+
+.span {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  display: block;
+}

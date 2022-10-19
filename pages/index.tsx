@@ -1,12 +1,7 @@
 import type { NextPage } from "next";
-import Titulo from "../components/title";
-
+import WelcomePage from "./welcome";
 const Home: NextPage = () => {
-  return (
-    <div>
-      <Titulo titulo={"Juan"} />
-    </div>
-  );
+  return <WelcomePage />;
 };
 
 export default Home;
