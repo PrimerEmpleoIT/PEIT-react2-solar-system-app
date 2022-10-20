@@ -1,0 +1,37 @@
+.container{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 322px;
+
+    /* Gradient / Blue */
+
+    background: linear-gradient(180deg, #5935FF 0%, #47408E 100%);
+    border-radius: 8px;
+}
+
+.title{
+    /* Regular / 14px */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    /* Brand / White */
+
+    color: #FFFFFF;
+}
+
+.planet{
+    /* Planets */
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 24px;
+    top: 12px;
+
+}
