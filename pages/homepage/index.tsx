@@ -3,12 +3,9 @@ import style from "./index.module.css";
 import Categories from "../../ui/categories";
 const HomePage = () => {
   return <div className={style.container}>
-<<<<<<< HEAD
-    <Categories />
-=======
-    <Search />
->>>>>>> development
-  </div>;
+      <Search />
+      <Categories />
+    </div>
 };
 
 export default HomePage;
