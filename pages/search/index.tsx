@@ -1,4 +1,4 @@
-import Navbar from "../../ui/navbar";
+import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 const SearchPage = () => {
   return (

@@ -1,7 +1,7 @@
-import Search from "../../ui/search";
+import Search from "../../components/search";
 import style from "./index.module.css";
-import Categories from "../../ui/categories";
-import Navbar from "../../ui/navbar";
+import Categories from "../../components/categories";
+import Navbar from "../../components/navbar";
 const HomePage = () => {
   return (
     <div className={style.container}>
