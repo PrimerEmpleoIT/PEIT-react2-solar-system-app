@@ -1,7 +1,7 @@
 .container {
   display: flex;
-  flex-direction: row;
-  gap: 18px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -14,6 +14,7 @@
 
   border-radius: 8px;
   cursor: pointer;
+  margin-bottom: 3px;
 }
 .category {
   /* Categorias */
@@ -32,6 +33,11 @@
   /* Brand / White */
 
   color: #ffffff;
+}
+
+.categoryContainer {
+  width: 100%;
+  padding: 0 15px;
 }
 
 .title {
