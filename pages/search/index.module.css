@@ -7,3 +7,8 @@
   align-items: center;
   height: 100vh;
 }
+
+.tituloContainer {
+  height: auto;
+  width: 90%;
+}
