@@ -8,4 +8,17 @@ body {
   padding: 0;
   height: 100vh;
   width: 100%;
+  background-image: url("../assets/Background.png");
+  background-color: #151515;
+}
+
+.not-found {
+  padding-top: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+.not-found a{
+  color: #4979ff;
+  text-decoration: underline;
 }
