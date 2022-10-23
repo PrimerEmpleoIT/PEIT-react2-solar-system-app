@@ -1,0 +1,99 @@
+.container {
+    position: relative;
+    width: 416px;
+    height: 100vh;
+    background: #FFFFFF;
+}
+
+.layer {
+    /* Layer */
+    position: absolute;
+    width: 416px;
+    height: 280px;
+    left: 0px;
+    top: 0px;
+    
+    background: #000000;
+    background-image: url("../../assets/Background-menu.png"); 
+    border-radius: 0px 0px 32px 32px;
+}
+.planet {
+    /* Planet / Mars */
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 67px;
+    top: 48px;
+    
+    filter: drop-shadow(0px 12px 24px rgba(249, 133, 0, 0.25));
+}
+
+.header {
+    /* Header */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    width: 374px;
+    height: 38px;
+    left: 20px;
+    top: 352px;
+
+}
+.header_icon{
+    
+    width: 20%;
+    height: 25px;
+
+}
+
+.content {
+    position: absolute;
+    width: 374px;
+    height: 114px;
+    left: 20px;
+    top: 430px;
+
+    /* Regular / 16px */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Brand / Background */
+
+    color: #151515;
+
+    opacity: 0.75;
+}
+
+.table {
+    /* Table */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+
+    position: absolute;
+    width: 374px;
+    height: 196px;
+    left: 20px;
+    top: 584px;
+
+}
+
+.extensible {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 374px;
+    height: 19px;
+    }
