@@ -10,3 +10,15 @@ body {
   width: 100%;
   background-color: #151515;
 }
+
+.not-found {
+  padding-top: 200px;
+  text-align: center;
+  color: #fff;
+}
+
+.not-found a{
+  font-size: 1.5rem;
+  color: #6b92fd;
+  text-decoration: underline;
+}
