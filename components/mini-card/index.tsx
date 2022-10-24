@@ -19,7 +19,7 @@ const MiniCard = (props: PlanetsType) => {
   const { name, planet } = props;
   return (
     <div className={style.container}>
-      <span className={style.imgContainer}>
+      <span style={{marginLeft:"-30px"}}>
         <Image
           src={"/" + planet + ".png"}
           alt=""

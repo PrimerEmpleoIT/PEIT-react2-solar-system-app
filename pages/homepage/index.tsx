@@ -3,6 +3,7 @@ import style from "./index.module.css";
 import Categories from "../../components/categories";
 import Navbar from "../../components/navbar";
 import HeaderNav from "../../components/headernav";
+import Carousel from "../../components/carousel";
 const HomePage = () => {
   return (
     <div className={style.container}>
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HeaderNav nombre="Usuario" page="homepage" />
       <Search />
       <Categories />
+      <Carousel />
       </div>
       <Navbar page="Inicio" />
     </div>
