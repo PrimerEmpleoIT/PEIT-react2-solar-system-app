@@ -7,7 +7,7 @@
 }
 
 .containerComponents {
-  padding: 30px 20px;
+  padding: 30px 20px 100px 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -15,7 +15,7 @@
 
 @media (max-width: 282px) {
   .containerComponents {
-    padding: 30px 20px;
+    padding: 30px 20px 100px 20px;
     display: flex;
     flex-direction: column;
     gap: 2px;
