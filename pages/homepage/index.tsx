@@ -6,9 +6,11 @@ import HeaderNav from "../../components/headernav";
 const HomePage = () => {
   return (
     <div className={style.container}>
+      <div className={style.containerComponents}>
       <HeaderNav nombre="Usuario" page="homepage" />
       <Search />
       <Categories />
+      </div>
       <Navbar page="Inicio" />
     </div>
   );

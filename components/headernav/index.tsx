@@ -4,7 +4,7 @@ import style from "./index.module.css";
 import Titulo from "../../ui/title";
 
 type HeaderType = {
-  page: string;
+  page: "homepage"|"no-title";
   nombre?: string;
 };
 
