@@ -1,0 +1,58 @@
+.card_container {
+  position: absolute;
+  background-color: #151515;
+  width: 374px;
+  height: 200px;
+  left: 10px;
+  top: 304px;
+  border-radius: 8px;
+
+}
+
+.card_title {
+  position: absolute;
+  font-family: "Roboto";
+  left: 49.73%;
+  right: 22.19%;
+  top: 0%;
+  bottom: 69%;
+  color: #FFFFFF;
+
+}
+
+.paragraph {
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  left: 49.73%;
+  right: 4.28%;
+  top: 30%;
+  color: #FFFFFF;
+  opacity: 0.65;
+
+}
+
+.arrowCard {
+  margin-left: 285px;
+}
+
+.continue {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  right: 100px;
+  color: #FFFFFF;
+  bottom: 0.5rem;
+}
+
+.saves {
+  position: absolute;
+  right: 20px;
+  color: #FFFFFF;
+  opacity: 0.65;
+  top: 30px;
+
+}
