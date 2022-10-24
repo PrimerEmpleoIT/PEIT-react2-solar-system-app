@@ -1,0 +1,43 @@
+.cardContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  border-radius: 20px;
+  background-color: #222222;
+}
+
+.leftSide {
+  height: 100%;
+  margin-right: 15px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+}
+
+.title h1 {
+  margin-right: 10px;
+}
+
+.title .h1 {
+  margin-right: 15px;
+}
+
+.continue {
+  display: flex;
+}
+
+.continue p {
+  margin-right: 10px;
+}
