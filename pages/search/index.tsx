@@ -6,14 +6,15 @@ import Titulo from "../../ui/title";
 const SearchPage = () => {
   return (
     <div className={style.container}>
-      <HeaderNav page="search" />
-      <div className={style.tituloContainer}>
+      <div className={style.containerComponents}>
+      <HeaderNav page="no-title" />
         <Titulo
           titulo="Resultados de la búsqueda"
           color="white"
           textAlign="left"
         />
       </div>
+
       <Navbar page="Buscar" />
     </div>
   );
