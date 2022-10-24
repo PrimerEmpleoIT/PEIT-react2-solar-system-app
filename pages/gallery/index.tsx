@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 import HeaderNav from "../../components/headernav";
 import Titulo from "../../ui/title";
+import Card from "../../components/card";
 
 const GalleryPage = () => {
   return (
@@ -9,17 +10,11 @@ const GalleryPage = () => {
       <div className={style.containerComponents}>
         <HeaderNav page="no-title" />
         <Titulo titulo="Galleria" color="white" textAlign="left" />
-        {/*codigo de prueba */}
-        <h1 style={{ color: "white" }}>
-          Aquí va el componente Card con su pre descripcion
-        </h1>
-        <h1 style={{ color: "white" }}>
-          Aquí va el componente Card con su pre descripcion
-        </h1>
-        <h1 style={{ color: "white" }}>
-          Aquí va el componente Card con su pre descripcion
-        </h1>
-        {/*fin codigo de prueba */}
+        <Card imagen="save" />
+        <Card imagen="save" />
+        <Card imagen="save" />
+        <Card imagen="save" />
+        <Card imagen="save" />
       </div>
       <Navbar page="Galeria" />
     </div>
