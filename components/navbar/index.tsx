@@ -44,13 +44,13 @@ const Navbar = (props: navBarType): ReactElement => {
         )}
         {page === "Guardados" ? (
           <li className={style.liContainer}>
-            <Image src="/images/saves.svg" width={27} height={27} />
+            <Image src="/images/save.svg" width={27} height={27} />
             {page}
           </li>
         ) : (
           <li className={style.liContainer}>
             <Image
-              src="/images/saves.svg"
+              src="/images/save.svg"
               width={27}
               height={27}
               className={style.iconImg}

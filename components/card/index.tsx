@@ -1,8 +1,13 @@
+import { ReactElement } from "react";
 import style from "./card.module.css";
 import Image from "next/image";
-import Titulo from "../../ui/title";
 
-const Card = () => {
+type cardType = {
+  imagen: "save" | "saved";
+};
+
+const Card = (props: cardType): ReactElement => {
+  const { imagen } = props;
   return (
     <div className={style.cardContainer}>
       <div className={style.leftSide}>
@@ -11,7 +16,7 @@ const Card = () => {
       <div className={style.rightSide}>
         <div className={style.title}>
           <h1>Neptuno</h1>
-          <Image src={"/images/saves.svg"} width={15} height={15} />
+          <Image src={`/images/${imagen}.svg`} width={15} height={15} />
         </div>
         <p>
           Neptuno es el octavo planeta del Sistema Solar, el último procedente
