@@ -9,6 +9,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #151515;
+  background-image: url("../assets/Background-menu.png");
 }
 
 .not-found {
@@ -17,7 +18,7 @@ body {
   color: #fff;
 }
 
-.not-found a{
+.not-found a {
   font-size: 1.5rem;
   color: #6b92fd;
   text-decoration: underline;
