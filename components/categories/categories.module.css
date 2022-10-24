@@ -60,3 +60,12 @@
   margin: 10px;
   text-align: center;
 }
+
+@media (max-width: 282px) {
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+}
