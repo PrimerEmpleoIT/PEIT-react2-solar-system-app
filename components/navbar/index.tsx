@@ -25,12 +25,14 @@ const Navbar = (props: navBarType): ReactElement => {
         ) : (
           <li className={style.liContainer}>
             <Link href={"/homepage"}>
-              <Image
-                src="/images/home.svg"
-                width={27}
-                height={27}
-                className={style.iconImg}
-              />
+              <a>
+                <Image
+                  src="/images/home.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
             </Link>
           </li>
         )}
@@ -46,12 +48,14 @@ const Navbar = (props: navBarType): ReactElement => {
         ) : (
           <li className={style.liContainer}>
             <Link href={"/search"}>
-              <Image
-                src="/images/search.svg"
-                width={27}
-                height={27}
-                className={style.iconImg}
-              />
+              <a>
+                <Image
+                  src="/images/search.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
             </Link>
           </li>
         )}
@@ -67,12 +71,14 @@ const Navbar = (props: navBarType): ReactElement => {
         ) : (
           <li className={style.liContainer}>
             <Link href={"/saved"}>
-              <Image
-                src="/images/save.svg"
-                width={27}
-                height={27}
-                className={style.iconImg}
-              />
+              <a>
+                <Image
+                  src="/images/save.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
             </Link>
           </li>
         )}
@@ -88,12 +94,14 @@ const Navbar = (props: navBarType): ReactElement => {
         ) : (
           <li className={style.liContainer}>
             <Link href={"/gallery"}>
-              <Image
-                src="/images/gallery.svg"
-                width={27}
-                height={27}
-                className={style.iconImg}
-              />
+              <a>
+                <Image
+                  src="/images/gallery.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
             </Link>
           </li>
         )}
