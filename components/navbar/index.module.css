@@ -37,3 +37,12 @@
   font-size: 12px;
   cursor: pointer;
 }
+
+.liContainer a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
