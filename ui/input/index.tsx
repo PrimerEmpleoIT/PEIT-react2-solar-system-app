@@ -15,6 +15,7 @@ const Input = (props: InputType): ReactElement => {
       type={tipo}
       placeholder={placeholder}
       className={style.input}
+      required
     />
   );
 };
