@@ -1,109 +1,84 @@
 .container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #FFFFFF;
-    
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.layer {
-    /* Layer */
-    position: absolute;
-    width: 100%;
-    height: 280px;
-    left: 0px;
-    top: 0px;   
-    background: #000000e8;
-    background-image: url("../../assets/Background-menu.png"); 
-    border-radius: 0px 0px 32px 32px;
+.upSide {
+  width: 100%;
+  height: 250px;
+  background: black;
+  background-image: url("../../assets/Background-menu.png");
+  border-radius: 0px 0px 32px 32px;
 }
 
 .planet {
-    /* Planet / Mars */
-    position: absolute;
-    width: 100%;
-    height: 280px;
-    left: 0px;
-    top: 48px;   
-    filter: drop-shadow(0px 12px 24px rgba(249, 133, 0, 0.25));
+  position: relative;
+  top: 25px;
+  filter: drop-shadow(0px 12px 24px rgba(249, 133, 0, 0.25));
+}
+
+.midleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0px 20px 0px 20px;
+  font-family: "Roboto", "sans-serif";
+}
+
+.midleContent p {
+  text-align: left;
 }
 
 .header {
-    /* Header */
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    width: 100%;
-    height: 45px;
-    left: 0px;
-    top: 352px;
-    margin: 0;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.header h2{
-    margin: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    }
-
-.header_icon{ 
-    width: 30%; 
-    height: 40px;
-    cursor: pointer;
+.header h2 {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
 }
 
-.header_icon .icon {
-    padding-right: 15px;
-}
-
-
-.content {
-    position: absolute;
-    width: 100%;
-    height: 114px;
-    left: 0px;
-    top: 430px;
-
-    /* Regular / 16px */
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-    /* Brand / Background */
-    color: #151515c5;
+.headerIcon {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .table {
-    /* Table */
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 20px;
-    color: #151515;
-    position: absolute;
-    width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #151515;
+  background-color: white;
 }
 
 .extensible {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 16px;
-    padding-bottom: 25px;
-    width: 100%;
-    height: 19px;
-    cursor: pointer;
-    }
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.431);
+  height: 50px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.description {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

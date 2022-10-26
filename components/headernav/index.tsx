@@ -4,7 +4,7 @@ import style from "./index.module.css";
 import Titulo from "../../ui/title";
 
 type HeaderType = {
-  page: "homepage"|"no-title";
+  page: "homepage" | "no-title";
   nombre?: string;
 };
 
@@ -23,11 +23,11 @@ const HeaderNav = (props: HeaderType): ReactElement => {
           <p>¿Qué aprenderás hoy?</p>
         </div>
       ) : (
-        <Image src="/images/back.svg" width={18} height={18} />
+        <Image src="/images/back.svg" width={25} height={25} />
       )}
 
       <div className={style.rightSide}>
-        <Image src="/images/settings.svg" width={18} height={18} />
+        <Image src="/images/settings.svg" width={25} height={25} />
       </div>
     </div>
   );

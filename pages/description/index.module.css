@@ -1,10 +1,20 @@
 .container {
-    background-color: #151515;
-    background-image: url("../../assets/Background-menu.png");
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.containerComponents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.position {
+  position: absolute;
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+}

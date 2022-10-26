@@ -2,36 +2,36 @@
   width: 100%;
   height: auto;
   display: flex;
+  gap: 10px;
   color: white;
   font-size: 12px;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", "sans-serif";
   border-radius: 20px;
   background-color: #222222;
 }
 
+.cardContainer p,
+.cardContainer h1 {
+  margin: 0;
+}
+
 .leftSide {
   height: 100%;
-  margin-right: 15px;
 }
 
 .rightSide {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 10px;
   text-align: left;
   width: 100%;
+  margin-right: 10px;
 }
 
 .title {
   display: flex;
-}
-
-.title h1 {
-  margin-right: 10px;
-}
-
-.title .h1 {
-  margin-right: 15px;
+  justify-content: space-between;
 }
 
 .continue {
