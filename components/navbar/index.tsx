@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import Image from "next/image";
 import style from "./index.module.css";
+import Link from "next/link";
 
 type navBarType = {
   page: "Inicio" | "Buscar" | "Guardados" | "Galeria";
@@ -14,62 +15,94 @@ const Navbar = (props: navBarType): ReactElement => {
       <ul className={style.containerUl}>
         {page === "Inicio" ? (
           <li className={style.liContainer}>
-            <Image src="/images/home.svg" width={27} height={27} />
-            {page}
+            <Link href={"/homepage"}>
+              <a>
+                <Image src="/images/home.svg" width={27} height={27} />
+                {page}
+              </a>
+            </Link>
           </li>
         ) : (
           <li className={style.liContainer}>
-            <Image
-              src="/images/home.svg"
-              width={27}
-              height={27}
-              className={style.iconImg}
-            />
+            <Link href={"/homepage"}>
+              <a>
+                <Image
+                  src="/images/home.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
+            </Link>
           </li>
         )}
         {page === "Buscar" ? (
           <li className={style.liContainer}>
-            <Image src="/images/search.svg" width={27} height={27} />
-            {page}
+            <Link href={"/search"}>
+              <a>
+                <Image src="/images/search.svg" width={27} height={27} />
+                {page}
+              </a>
+            </Link>
           </li>
         ) : (
           <li className={style.liContainer}>
-            <Image
-              src="/images/search.svg"
-              width={27}
-              height={27}
-              className={style.iconImg}
-            />
+            <Link href={"/search"}>
+              <a>
+                <Image
+                  src="/images/search.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
+            </Link>
           </li>
         )}
         {page === "Guardados" ? (
           <li className={style.liContainer}>
-            <Image src="/images/save.svg" width={27} height={27} />
-            {page}
+            <Link href={"/saved"}>
+              <a>
+                <Image src="/images/save.svg" width={27} height={27} />
+                {page}
+              </a>
+            </Link>
           </li>
         ) : (
           <li className={style.liContainer}>
-            <Image
-              src="/images/save.svg"
-              width={27}
-              height={27}
-              className={style.iconImg}
-            />
+            <Link href={"/saved"}>
+              <a>
+                <Image
+                  src="/images/save.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
+            </Link>
           </li>
         )}
         {page === "Galeria" ? (
           <li className={style.liContainer}>
-            <Image src="/images/gallery.svg" width={27} height={27} />
-            {page}
+            <Link href={"/gallery"}>
+              <a>
+                <Image src="/images/gallery.svg" width={27} height={27} />
+                {page}
+              </a>
+            </Link>
           </li>
         ) : (
           <li className={style.liContainer}>
-            <Image
-              src="/images/gallery.svg"
-              width={27}
-              height={27}
-              className={style.iconImg}
-            />
+            <Link href={"/gallery"}>
+              <a>
+                <Image
+                  src="/images/gallery.svg"
+                  width={27}
+                  height={27}
+                  className={style.iconImg}
+                />
+              </a>
+            </Link>
           </li>
         )}
       </ul>
