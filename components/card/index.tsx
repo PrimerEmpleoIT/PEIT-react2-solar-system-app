@@ -39,11 +39,11 @@ const Card = (props: cardType): ReactElement => {
       <div className={style.rightSide}>
         <div className={style.title}>
           <h1>{nombre}</h1>
-          <div onClick={handleSave}>
+          <div className={style.saveImage} onClick={handleSave}>
             <Image
               src={`/images/${saved ? "saved" : "save"}.svg`}
-              width={15}
-              height={15}
+              width={20}
+              height={20}
             />
           </div>
         </div>

@@ -28,7 +28,7 @@ const GalleryPage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page="no-title" />
-        <Titulo titulo="Galleria" color="white" textAlign="left" />
+        <Titulo titulo="Galeria" color="white" textAlign="left" />
         {getCards()}
       </div>
       <Navbar page="Galeria" />

@@ -145,6 +145,4 @@ const data: any = [
   },
 ];
 
-console.log(data);
-
 export default data;
