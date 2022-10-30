@@ -13,7 +13,6 @@ const GalleryPage = () => {
       cards.push(
         <Card
           key={el.id}
-          imagen="save"
           nombre={el.title}
           parrafo={el.parrafo}
           foto={el.foto}

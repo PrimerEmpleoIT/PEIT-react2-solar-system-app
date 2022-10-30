@@ -1,10 +1,10 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import style from "./card.module.css";
 import Image from "next/image";
 import Router from "next/router";
+import dataBd from "../../data/data";
 
 type cardType = {
-  imagen: "save" | "saved";
   parrafo: string;
   foto: any;
   nombre: string;
@@ -12,7 +12,14 @@ type cardType = {
 };
 
 const Card = (props: cardType): ReactElement => {
-  const { imagen, parrafo, foto, nombre, data } = props;
+  const { parrafo, foto, nombre, data } = props;
+
+  const [saved, setSaved] = useState(false);
+
+  const handleSave = () => {
+    setSaved(!saved);
+    dataBd[data - 1].saved = (!saved).toString();
+  };
 
   const handleClick = () => {
     Router.push("/description/" + data);
@@ -32,7 +39,13 @@ const Card = (props: cardType): ReactElement => {
       <div className={style.rightSide}>
         <div className={style.title}>
           <h1>{nombre}</h1>
-          <Image src={`/images/${imagen}.svg`} width={15} height={15} />
+          <div onClick={handleSave}>
+            <Image
+              src={`/images/${saved ? "saved" : "save"}.svg`}
+              width={15}
+              height={15}
+            />
+          </div>
         </div>
         <p className={style.texO}>{parrafo}</p>
         <div className={style.continue} onClick={handleClick}>
