@@ -26,3 +26,71 @@
   background-clip: text;
   color: transparent;
 }
+.settingsContainer {
+  position: fixed;
+  background-color: white;
+  width: 220px;
+  height: 190px;
+  top: 60px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 3px;
+  font-family: "Roboto";
+}
+.settingsHeader {
+  display: grid;
+  width: 92%;
+  margin: 0 auto;
+  grid-template-columns: 12px 1fr 35px;
+  border-bottom: 1px solid var(--ds-border, rgba(9, 30, 66, 0.13));
+}
+.settingsTitle {
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.settingsButton {
+  border: 0;
+  background: transparent;
+  grid-column: 3;
+  grid-row: 1;
+  padding: 0;
+}
+.settingsMenu,
+.settingsName,
+.settingsChangeName,
+.settingsClose {
+  margin: 0;
+  padding: 0;
+}
+.settingsName {
+  background-image: linear-gradient(60deg, #ff6cd9, #fa0070);
+  background-clip: text;
+  color: transparent;
+  height: 80px;
+  line-height: 80px;
+  width: 92%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--ds-border, rgba(9, 30, 66, 0.13));
+}
+.settingsChangeName,
+.settingsClose {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  padding: 9px;
+  cursor: pointer;
+}
+.settingsChangeName a {
+  text-decoration: none;
+  color: inherit;
+}
+.settingsChangeName:hover,
+.settingsClose:hover {
+  background-color: rgba(9, 30, 66, 0.04);
+}

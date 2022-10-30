@@ -4,11 +4,12 @@ import Categories from "../../components/categories";
 import Navbar from "../../components/navbar";
 import HeaderNav from "../../components/headernav";
 import Carousel from "../../components/carousel";
+
 const HomePage = () => {
   return (
     <div className={style.container}>
       <div className={style.containerComponents}>
-        <HeaderNav nombre="Usuario" page="homepage" />
+        <HeaderNav page="homepage" />
         <Search />
         <Categories />
         <Carousel />
