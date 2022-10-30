@@ -1,27 +1,17 @@
 import Image from "next/image";
 import style from "./index.module.css";
-type PlanetsType = {
-  planet:
-    | "sun"
-    | "mercury"
-    | "venus"
-    | "earth"
-    | "mars"
-    | "jupiter"
-    | "saturn"
-    | "uranus"
-    | "neptune"
-    | "pluto";
+type UniversoType = {
+  tipo: string;
   name: string;
 };
 
-const MiniCard = (props: PlanetsType) => {
-  const { name, planet } = props;
+const MiniCard = (props: UniversoType) => {
+  const { name, tipo } = props;
   return (
     <div className={style.container}>
-      <span style={{marginLeft:"-30px"}}>
+      <span style={{ marginLeft: "-30px" }}>
         <Image
-          src={"/" + planet + ".png"}
+          src={"/" + tipo + ".png"}
           alt=""
           width={110}
           height={134}
