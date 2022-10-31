@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import style from "./search.module.css";
-import data from "./Data.json"
-import Link from "next/link";
+import data from "../../data/data";
+import Router from "next/router";
 
 interface DataSearch{
   id: number | string;
-  first_name: string;
+  name: string;
   image?: string;
 }
 
@@ -18,8 +18,8 @@ export default function Search() {
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>){
     const searchWord = e.target.value
-    const newFilter = data.filter((value) => {
-      return value.first_name.toLowerCase().includes(searchWord)
+    const newFilter = data.filter((value: { name: string;}) => {
+      return value.name.toLowerCase().includes(searchWord) 
     });
     if(searchWord === ""){
       setFilteredData([])
@@ -52,7 +52,7 @@ export default function Search() {
       { filteredData.length != 0 && (
         <div className={style.dataResult}>
           {filteredData.map((value) => {
-          return <a href="/gallery" key={value.id} className={style.dataItem}> <p>{value.first_name}</p></a>
+          return <div  key={value.id} className={style.dataItem} onClick={() => {Router.push("/description/" + value.id)}}> <p>{value.name}</p></div>
         })}
         </div>
       )}
