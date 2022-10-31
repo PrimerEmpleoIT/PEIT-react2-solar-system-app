@@ -1,9 +1,16 @@
 import Image from "next/image";
+import Router from "next/router";
 import style from "./search.module.css";
 
 export default function Search(props: any) {
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const keywords = e.target.keywords.value;
+    const valueLowerCase = keywords.toLowerCase();
+    Router.push("/search/" + valueLowerCase);
+  };
   return (
-    <div className={style.box}>
+    <form onSubmit={handleSubmit} className={style.box}>
       <input
         autoComplete="off"
         spellCheck="false"
@@ -11,15 +18,16 @@ export default function Search(props: any) {
         type="text"
         name="keywords"
         placeholder="Buscar"
+        required
       />
-      <span className={style.btn_search}>
+      <button className={style.btn_search}>
         <Image
           src="/search.svg"
           alt="magnifying glass"
           width={15}
           height={15}
         />
-      </span>
-    </div>
+      </button>
+    </form>
   );
 }

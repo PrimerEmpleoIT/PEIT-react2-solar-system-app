@@ -16,7 +16,7 @@ const GalleryPage = () => {
           nombre={el.title}
           parrafo={el.parrafo}
           foto={el.foto}
-          data={el.id}
+          id={el.id}
         />
       );
     });

@@ -5,6 +5,7 @@ import HeaderNav from "../../components/headernav";
 import data from "../../data/data";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Router from "next/router";
 
 export default function Description() {
   const router = useRouter();
@@ -15,8 +16,12 @@ export default function Description() {
   useEffect(() => {
     if (!router.isReady) return;
     const result = data.filter((x: any) => x.id == query);
-    setInfo(result[0]);
-    setDescription(result[0].data);
+    if (result.length != 0) {
+      setInfo(result[0]);
+      setDescription(result[0].data);
+    } else {
+      Router.push("/404");
+    }
   }, [router.isReady]);
 
   return (
