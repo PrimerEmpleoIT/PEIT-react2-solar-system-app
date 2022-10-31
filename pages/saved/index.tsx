@@ -10,11 +10,6 @@ const SavedPage = () => {
       <div className={style.containerComponents}>
         <HeaderNav page={"no-title"} />
         <Title titulo={"Guardados"} color={"white"} textAlign={"left"} />
-        <Card imagen="saved" />
-        <Card imagen="saved" />
-        <Card imagen="saved" />
-        <Card imagen="saved" />
-        <Card imagen="saved" />
       </div>
       <Navbar page={"Guardados"} />
     </div>
