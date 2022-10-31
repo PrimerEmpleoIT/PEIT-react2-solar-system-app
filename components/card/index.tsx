@@ -1,28 +1,54 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import style from "./card.module.css";
 import Image from "next/image";
+import Router from "next/router";
+import dataBd from "../../data/data";
 
 type cardType = {
-  imagen: "save" | "saved";
+  parrafo: string;
+  foto: any;
+  nombre: string;
+  data: any;
 };
 
 const Card = (props: cardType): ReactElement => {
-  const { imagen } = props;
+  const { parrafo, foto, nombre, data } = props;
+
+  const [saved, setSaved] = useState(false);
+
+  const handleSave = () => {
+    setSaved(!saved);
+    dataBd[data - 1].saved = (!saved).toString();
+  };
+
+  const handleClick = () => {
+    Router.push("/description/" + data);
+  };
+
   return (
     <div className={style.cardContainer}>
       <div className={style.leftSide}>
-        <Image src={"/neptuneCard.png"} alt="" width={250} height={250} />
+        <Image
+          src={`/${foto}.png`}
+          alt=""
+          width={175}
+          height={200}
+          className={style.bor}
+        />
       </div>
       <div className={style.rightSide}>
         <div className={style.title}>
-          <h1>Neptuno</h1>
-          <Image src={`/images/${imagen}.svg`} width={15} height={15} />
+          <h1>{nombre}</h1>
+          <div className={style.saveImage} onClick={handleSave}>
+            <Image
+              src={`/images/${saved ? "saved" : "save"}.svg`}
+              width={20}
+              height={20}
+            />
+          </div>
         </div>
-        <p>
-          Neptuno es el octavo planeta del Sistema Solar, el último procedente
-          del Sol desde la reclasificación...
-        </p>
-        <div className={style.continue}>
+        <p className={style.texO}>{parrafo}</p>
+        <div className={style.continue} onClick={handleClick}>
           <p>Continue leyendo</p>
           <Image src={"/arrow.svg"} width={16} height={16} />
         </div>

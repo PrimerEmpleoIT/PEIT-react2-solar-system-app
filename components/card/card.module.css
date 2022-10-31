@@ -6,7 +6,7 @@
   color: white;
   font-size: 12px;
   font-family: "Roboto", "sans-serif";
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #222222;
 }
 
@@ -26,12 +26,20 @@
   gap: 10px;
   text-align: left;
   width: 100%;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 .title {
   display: flex;
   justify-content: space-between;
+}
+
+.saveImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 .continue {
@@ -40,4 +48,16 @@
 
 .continue p {
   margin-right: 10px;
+}
+
+.texO {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bor {
+  border-radius: 10px 0 0 0;
+  overflow: scroll;
 }

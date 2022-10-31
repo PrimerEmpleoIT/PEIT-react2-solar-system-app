@@ -4,22 +4,21 @@ import Toggle from "./Toggle";
 
 type ItemToggle = {
   name: string;
-  data: Array<{
-    feature: string;
-    description: string;
-  }>;
+  data: any;
   id: number;
   imagen: "save" | "saved";
+  parrafo: string;
+  galeria: string;
 };
 
 export default function Article(props: ItemToggle) {
-  const { id, name, data, imagen } = props;
+  const { id, name, data, imagen, parrafo, galeria } = props;
 
   return (
     <div className={style.container}>
       <div className={style.upSide}>
         <div className={style.planet}>
-          <Image src="/Mars.svg" alt="mars" height={280} width={280} />
+          <Image src={`/${galeria}.png`} alt="" height={250} width={250} />
         </div>
       </div>
       <div className={style.midleContent}>
@@ -34,16 +33,15 @@ export default function Article(props: ItemToggle) {
             </div>
           </div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, placeat.
-          Iste numquam, consequuntur atque quae tempora, reprehenderit inventore
-          odit repellat quas omnis doloremque eligendi dolorum in velit nostrum
-          incidunt nisi?
-        </p>
+        <p>{parrafo}</p>
         <div className={style.table}>
-          {data.map((d, i) => {
+          {data.map((d: any) => {
             return (
-              <Toggle key={i} feature={d.feature} description={d.description} />
+              <Toggle
+                key={d.feature}
+                feature={d.feature}
+                description={d.description}
+              />
             );
           })}
         </div>
