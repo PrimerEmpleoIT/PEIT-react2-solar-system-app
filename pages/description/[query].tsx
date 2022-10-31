@@ -4,15 +4,20 @@ import Navbar from "../../components/navbar";
 import HeaderNav from "../../components/headernav";
 import data from "../../data/data";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Description() {
   const router = useRouter();
-
   const { query } = router.query;
+  const [info, setInfo]: any = useState([]);
+  const [description, setDescription] = useState([]);
 
-  console.log(query);
-
-  const result: any = data.filter((x: any) => x.id == query);
+  useEffect(() => {
+    if (!router.isReady) return;
+    const result = data.filter((x: any) => x.id == query);
+    setInfo(result[0]);
+    setDescription(result[0].data);
+  }, [router.isReady]);
 
   return (
     <div className={style.container}>
@@ -21,11 +26,11 @@ export default function Description() {
       </div>
       <div className={style.containerComponents}>
         <Article
-          name={result[0].title}
-          id={result[0].id}
-          data={result[0].data}
-          parrafo={result[0].parrafo}
-          galeria={result[0].galeria}
+          name={info.title}
+          id={info.id}
+          data={description}
+          parrafo={info.parrafo}
+          galeria={info.galeria}
           imagen="save"
         />
       </div>

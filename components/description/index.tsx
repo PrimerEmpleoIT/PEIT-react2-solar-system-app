@@ -35,9 +35,13 @@ export default function Article(props: ItemToggle) {
         </div>
         <p>{parrafo}</p>
         <div className={style.table}>
-          {data.map((d: any, i: any) => {
+          {data.map((d: any) => {
             return (
-              <Toggle key={i} feature={d.feature} description={d.description} />
+              <Toggle
+                key={d.feature}
+                feature={d.feature}
+                description={d.description}
+              />
             );
           })}
         </div>
