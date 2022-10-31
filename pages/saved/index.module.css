@@ -1,0 +1,12 @@
+.container {
+  background-image: url("../../assets/Background-menu.png");
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.containerComponents {
+  padding: 30px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

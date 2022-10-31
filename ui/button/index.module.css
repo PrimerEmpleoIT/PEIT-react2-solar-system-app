@@ -1,0 +1,11 @@
+.botonNaranja {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ef5f53 0%, #fa8f70 100%);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 51px;
+}

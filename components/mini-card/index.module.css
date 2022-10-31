@@ -1,0 +1,23 @@
+.container {
+  width: 140px;
+  height: 190px;
+  background: #151515;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.name {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 16px;
+}
+.arrow {
+  margin-right: 18px;
+}

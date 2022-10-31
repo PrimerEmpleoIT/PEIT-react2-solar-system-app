@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+
+  width: 80px;
+  height: 80px;
+  /* Gradient / Blue */
+
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+.category {
+  /* Categorias */
+  width: 78px;
+  height: 19px;
+
+  /* Regular / 16px */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  /* Brand / White */
+
+  color: #ffffff;
+}
+
+.categoryContainer {
+  width: 100%;
+}
+
+.title {
+  /* Regular / 14px */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 5px;
+  /* Brand / White */
+
+  color: #ffffff;
+}
+
+.planet {
+  /* Planets */
+  margin: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+@media (max-width: 282px) {
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+}

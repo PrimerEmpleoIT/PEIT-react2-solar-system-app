@@ -1,0 +1,48 @@
+.containerNav {
+  width: 100%;
+  height: 80px;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #222222;
+  border-radius: 25px 25px 0 0;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.containerUl {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.iconImg {
+  opacity: 0.5;
+}
+
+.liContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.liContainer a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
