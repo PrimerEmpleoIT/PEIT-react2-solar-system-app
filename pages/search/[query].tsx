@@ -36,7 +36,7 @@ const SearchPage = () => {
             parrafo={d.parrafo}
             foto={d.foto}
             nombre={d.name}
-            data={d.data}
+            id={d.id}
           />
         ))}
         <p className={style.interest}>También te puede interesar</p>

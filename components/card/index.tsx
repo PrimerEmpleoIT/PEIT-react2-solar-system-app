@@ -8,21 +8,20 @@ type cardType = {
   parrafo: string;
   foto: any;
   nombre: string;
-  data: any;
+  id: number;
 };
 
 const Card = (props: cardType): ReactElement => {
-  const { parrafo, foto, nombre, data } = props;
-
+  const { parrafo, foto, nombre, id } = props;
   const [saved, setSaved] = useState(false);
 
   const handleSave = () => {
     setSaved(!saved);
-    dataBd[data - 1].saved = (!saved).toString();
+    dataBd[id - 1].saved = (!saved).toString();
   };
 
   const handleClick = () => {
-    Router.push("/description/" + data);
+    Router.push("/description/" + id);
   };
 
   return (
