@@ -10,15 +10,8 @@ const SearchPage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page="no-title" />
-        <Titulo
-          titulo="Resultados de la búsqueda"
-          color="white"
-          textAlign="left"
-        />
+        <Titulo titulo="Realice su busqueda" color="white" textAlign="left" />
         <Search />
-        <Card imagen="save" />
-        <p className={style.interest}>También te puede interesar</p>
-        <Card imagen="saved" />
       </div>
       <Navbar page="Buscar" />
     </div>

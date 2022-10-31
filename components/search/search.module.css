@@ -33,4 +33,6 @@
   margin: 1rem;
   position: absolute;
   background-color: transparent;
+  border: none;
+  padding: 0;
 }
