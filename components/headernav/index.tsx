@@ -4,6 +4,7 @@ import style from "./index.module.css";
 import Titulo from "../../ui/title";
 import Router from "next/router";
 import Link from "next/link";
+import data from "../../data/data";
 
 type HeaderType = {
   page: "homepage" | "no-title";
@@ -26,6 +27,9 @@ const HeaderNav = (props: HeaderType): ReactElement => {
   };
   const signOff = () => {
     sessionStorage.removeItem("fullname");
+    for (let i = 0; i < data.length; i++) {
+      sessionStorage.removeItem(`dataId${i}`);
+    }
     Router.push("/");
   };
   return (
