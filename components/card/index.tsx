@@ -1,8 +1,9 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import style from "./card.module.css";
 import Image from "next/image";
 import Router from "next/router";
-import dataBd from "../../data/data";
+import data from "../../data/data";
+import { changeSaved } from "../../hooks";
 
 type cardType = {
   parrafo: string;
@@ -13,11 +14,27 @@ type cardType = {
 
 const Card = (props: cardType): ReactElement => {
   const { parrafo, foto, nombre, id } = props;
-  const [saved, setSaved] = useState(false);
+
+  const [saved, setSaved] = useState("save");
+
+  const { savedState, setSavedState } = changeSaved();
+
+  useEffect(() => {
+    if (sessionStorage.length > 1) {
+      for (let i = 1; i < data.length; i++) {
+        if (sessionStorage.hasOwnProperty(`dataId${id}`)) {
+          setSaved("saved");
+        }
+      }
+    }
+  });
 
   const handleSave = () => {
-    setSaved(!saved);
-    dataBd[id - 1].saved = (!saved).toString();
+    saved === "save"
+      ? (setSaved("saved"),
+        sessionStorage.setItem(`dataId${id}`, id.toString()))
+      : (setSaved("save"), sessionStorage.removeItem(`dataId${id}`));
+    setSavedState(!savedState);
   };
 
   const handleClick = () => {
@@ -39,11 +56,7 @@ const Card = (props: cardType): ReactElement => {
         <div className={style.title}>
           <h1>{nombre}</h1>
           <div className={style.saveImage} onClick={handleSave}>
-            <Image
-              src={`/images/${saved ? "saved" : "save"}.svg`}
-              width={20}
-              height={20}
-            />
+            <Image src={`/images/${saved}.svg`} width={20} height={20} />
           </div>
         </div>
         <p className={style.texO}>{parrafo}</p>
