@@ -7,17 +7,25 @@ import Card from "../../components/card";
 import dataBD from "../../data/data";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Fuse from "fuse.js";
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
   const [data, setData] = useState([]);
+  const fuse: any = new Fuse(dataBD, {
+    keys: [
+      { name: "name", weight: 0.3 },
+      { name: "categoria", weight: 0.7 },
+    ],
+    minMatchCharLength: 1,
+  });
 
   useEffect(() => {
     if (!router.isReady) return;
-    const result = dataBD.filter(
-      (x: any) => x.name == query || x.categoria == query
-    );
-    setData(result);
+    if (query != undefined) {
+      const resultFuse = fuse.search(query.toString());
+      setData(resultFuse);
+    }
   }, [router.isReady, query]);
 
   return (
@@ -32,11 +40,11 @@ const SearchPage = () => {
         <Search />
         {data.map((d: any) => (
           <Card
-            key={d.id}
-            parrafo={d.parrafo}
-            foto={d.foto}
-            nombre={d.name}
-            id={d.id}
+            key={d.item.id}
+            parrafo={d.item.parrafo}
+            foto={d.item.foto}
+            nombre={d.item.name}
+            id={d.item.id}
           />
         ))}
         <p className={style.interest}>También te puede interesar</p>
