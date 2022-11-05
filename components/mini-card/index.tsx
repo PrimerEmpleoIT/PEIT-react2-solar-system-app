@@ -14,13 +14,14 @@ const MiniCard = (props: UniversoType) => {
   };
   return (
     <div className={style.container}>
-      <span style={{ marginLeft: "-30px" }}>
+      <span className={style.spanImage}>
         <Image
           src={"/" + tipo + ".png"}
           alt=""
           width={110}
           height={134}
           quality={100}
+          className={style.borderImage}
         />
       </span>
       <span className={style.nameContainer}>

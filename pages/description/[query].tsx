@@ -35,7 +35,7 @@ export default function Description() {
           id={info.id}
           data={description}
           parrafo={info.parrafo}
-          galeria={info.galeria}
+          galeria={info.image}
           imagen="save"
         />
       </div>

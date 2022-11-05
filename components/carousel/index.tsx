@@ -26,7 +26,7 @@ const Carousel = () => {
       </h1>
       <Slider {...settings}>
         {universo.map((u: any) => (
-          <MiniCard key={u.id} tipo={u.foto} name={u.title} id={u.id} />
+          <MiniCard key={u.id} tipo={u.card} name={u.title} id={u.id} />
         ))}
       </Slider>
     </div>

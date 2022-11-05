@@ -21,7 +21,7 @@ const SavedPage = () => {
             key={el.id}
             nombre={el.title}
             parrafo={el.parrafo}
-            foto={el.foto}
+            foto={el.card}
             id={el.id}
           />
         );

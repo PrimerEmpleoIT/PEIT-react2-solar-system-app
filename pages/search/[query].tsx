@@ -42,7 +42,7 @@ const SearchPage = () => {
           <Card
             key={d.item.id}
             parrafo={d.item.parrafo}
-            foto={d.item.foto}
+            foto={d.item.card}
             nombre={d.item.name}
             id={d.item.id}
           />

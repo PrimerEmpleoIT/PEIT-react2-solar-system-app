@@ -49,17 +49,17 @@ const Card = (props: cardType): ReactElement => {
           alt=""
           width={175}
           height={200}
-          className={style.bor}
+          className={style.borderImage}
         />
       </div>
       <div className={style.rightSide}>
         <div className={style.title}>
-          <h1>{nombre}</h1>
+          <h1 className={style.nameTitle}>{nombre}</h1>
           <div className={style.saveImage} onClick={handleSave}>
             <Image src={`/images/${saved}.svg`} width={20} height={20} />
           </div>
         </div>
-        <p className={style.texO}>{parrafo}</p>
+        <p className={style.texcontinue}>{parrafo}</p>
         <div className={style.continue} onClick={handleClick}>
           <p>Continue leyendo</p>
           <Image src={"/arrow.svg"} width={16} height={16} />
