@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+import Share from "../share";
 import style from "./description.module.css";
 import Toggle from "./Toggle";
 
@@ -13,6 +15,7 @@ type ItemToggle = {
 
 export default function Article(props: ItemToggle) {
   const { id, name, data, imagen, parrafo, galeria } = props;
+  const [actived, setActived] = useState(false);
 
   return (
     <div className={style.container}>
@@ -25,8 +28,12 @@ export default function Article(props: ItemToggle) {
         <div className={style.header}>
           <h2> {name} </h2>
           <div className={style.headerIcon}>
-            <div className={style.share}>
+            <div
+              className={style.share}
+              onClick={() => setActived((prev) => !prev)}
+            >
               <Image alt="share" src="/Share.svg" width={25} height={25} />
+              {actived && <Share />}
             </div>
             <div className={style.save}>
               <Image alt="save" src={`/${imagen}.svg`} width={25} height={25} />

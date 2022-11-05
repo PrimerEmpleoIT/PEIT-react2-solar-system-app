@@ -4,7 +4,7 @@
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 35px;
 }
 
 .upSide {
@@ -31,6 +31,7 @@
 
 .midleContent p {
   text-align: left;
+  margin: 0;
 }
 
 .header {
@@ -48,6 +49,8 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
+  width: 275px;
+  text-align: left;
 }
 
 .headerIcon {
