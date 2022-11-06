@@ -8,6 +8,7 @@ import dataBD from "../../data/data";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
+import NoResults from "../../ui/no-results";
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
@@ -38,15 +39,20 @@ const SearchPage = () => {
           textAlign="left"
         />
         <Search />
-        {data.map((d: any) => (
-          <Card
-            key={d.item.id}
-            paragraph={d.item.paragraph}
-            image={d.item.card}
-            nombre={d.item.name}
-            id={d.item.id}
-          />
-        ))}
+        {data.length == 0 ? (
+          <NoResults title="No se encontraron resultados" />
+        ) : (
+          data.map((d: any) => (
+            <Card
+              key={d.item.id}
+              paragraph={d.item.paragraph}
+              image={d.item.card}
+              nombre={d.item.name}
+              id={d.item.id}
+            />
+          ))
+        )}
+
         <p className={style.interest}>También te puede interesar</p>
       </div>
       <Navbar page="Buscar" />
