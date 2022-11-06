@@ -20,8 +20,8 @@ const SavedPage = () => {
           <Card
             key={el.id}
             nombre={el.title}
-            parrafo={el.parrafo}
-            foto={el.card}
+            paragraph={el.paragraph}
+            image={el.card}
             id={el.id}
           />
         );

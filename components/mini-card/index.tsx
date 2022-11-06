@@ -2,13 +2,13 @@ import Image from "next/image";
 import Router from "next/router";
 import style from "./index.module.css";
 type UniversoType = {
-  tipo: string;
+  image: string;
   name: string;
   id: number;
 };
 
 const MiniCard = (props: UniversoType) => {
-  const { name, tipo, id } = props;
+  const { name, image, id } = props;
   const handleClick = () => {
     Router.push("/description/" + id);
   };
@@ -16,7 +16,7 @@ const MiniCard = (props: UniversoType) => {
     <div className={style.container}>
       <span className={style.spanImage}>
         <Image
-          src={"/" + tipo + ".png"}
+          src={"/" + image + ".png"}
           alt=""
           width={110}
           height={134}

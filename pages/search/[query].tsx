@@ -15,7 +15,7 @@ const SearchPage = () => {
   const fuse: any = new Fuse(dataBD, {
     keys: [
       { name: "name", weight: 0.3 },
-      { name: "categoria", weight: 0.7 },
+      { name: "category", weight: 0.7 },
     ],
     minMatchCharLength: 1,
   });
@@ -41,8 +41,8 @@ const SearchPage = () => {
         {data.map((d: any) => (
           <Card
             key={d.item.id}
-            parrafo={d.item.parrafo}
-            foto={d.item.card}
+            paragraph={d.item.paragraph}
+            image={d.item.card}
             nombre={d.item.name}
             id={d.item.id}
           />

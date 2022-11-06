@@ -12,8 +12,8 @@ const Carousel = () => {
   const [universo, setUniverso] = useState([]);
   useEffect(() => {
     if (categoriesState != "") {
-      const categoria = categoriesState.toLowerCase();
-      setUniverso(data.filter((x: any) => x.categoria == categoria));
+      const category = categoriesState.toLowerCase();
+      setUniverso(data.filter((x: any) => x.category == category));
     } else {
       setUniverso(data);
     }
@@ -26,7 +26,7 @@ const Carousel = () => {
       </h1>
       <Slider {...settings}>
         {universo.map((u: any) => (
-          <MiniCard key={u.id} tipo={u.card} name={u.title} id={u.id} />
+          <MiniCard key={u.id} image={u.card} name={u.title} id={u.id} />
         ))}
       </Slider>
     </div>

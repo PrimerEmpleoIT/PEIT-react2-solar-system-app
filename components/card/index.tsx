@@ -6,14 +6,14 @@ import data from "../../data/data";
 import { changeSaved } from "../../hooks";
 
 type cardType = {
-  parrafo: string;
-  foto: any;
+  paragraph: string;
+  image: any;
   nombre: string;
   id: number;
 };
 
 const Card = (props: cardType): ReactElement => {
-  const { parrafo, foto, nombre, id } = props;
+  const { paragraph, image, nombre, id } = props;
 
   const [saved, setSaved] = useState("save");
 
@@ -45,7 +45,7 @@ const Card = (props: cardType): ReactElement => {
     <div className={style.cardContainer}>
       <div className={style.leftSide}>
         <Image
-          src={`/${foto}.png`}
+          src={`/${image}.png`}
           alt=""
           width={175}
           height={200}
@@ -59,7 +59,7 @@ const Card = (props: cardType): ReactElement => {
             <Image src={`/images/${saved}.svg`} width={20} height={20} />
           </div>
         </div>
-        <p className={style.texcontinue}>{parrafo}</p>
+        <p className={style.texcontinue}>{paragraph}</p>
         <div className={style.continue} onClick={handleClick}>
           <p>Continue leyendo</p>
           <Image src={"/arrow.svg"} width={16} height={16} />
