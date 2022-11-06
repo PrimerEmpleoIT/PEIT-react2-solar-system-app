@@ -17,7 +17,7 @@ const LoginPage = () => {
         <Titulo titulo={"Ingresa tu nombre"} color="white" textAlign="center" />
       </div>
       <form onSubmit={handleSubmit}>
-        <Input tipo="text" placeholder="Escribe aquí" name="fullname" />
+        <Input type="text" placeholder="Escribe aquí" name="fullname" />
         <div className={style.buttonContainer}>
           <Button displayName="Ingresar" />
         </div>

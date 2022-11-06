@@ -18,7 +18,7 @@
 .planet {
   position: relative;
   top: 25px;
-  filter: drop-shadow(0px 12px 24px rgba(249, 133, 0, 0.25));
+  filter: drop-shadow(0px 12px 24px rgba(22, 21, 21, 0.552));
 }
 
 .midleContent {
@@ -31,7 +31,6 @@
 
 .midleContent p {
   text-align: left;
-  margin: 0;
 }
 
 .header {
@@ -49,8 +48,6 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  width: 275px;
-  text-align: left;
 }
 
 .headerIcon {

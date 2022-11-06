@@ -1,15 +1,18 @@
 .container {
   width: 140px;
-  height: 190px;
-  background: #151515;
-  border-radius: 8px;
+  height: 100%;
+  background: #1e1e1e;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
 .nameContainer {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .name {
   font-family: "Roboto";
@@ -17,7 +20,20 @@
   font-size: 16px;
   color: #ffffff;
   margin-left: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .arrow {
   margin-right: 18px;
+}
+
+.spanImage {
+  margin-left: -30px;
+}
+
+.borderImage {
+  border-radius: 10px 0 0 0;
+  overflow: scroll;
 }
