@@ -10,10 +10,13 @@ import Fuse from "fuse.js";
 import NoResults from "../../ui/no-results";
 import dynamic from "next/dynamic";
 import { changeSaved } from "../../hooks";
+import { changeQuery } from "../../hooks";
+
 
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
+  const { setQueryState } = changeQuery();
   const [data, setData] = useState([]);
   const [cardInterest, setCardInterest] = useState([]);
   const { savedState } = changeSaved();
@@ -39,6 +42,7 @@ const SearchPage = () => {
     if (query != undefined) {
       const resultFuse = fuse.search(query.toString());
       setData(resultFuse);
+      setQueryState(query.toString());
     }
   }, [router.isReady, query]);
 
@@ -85,7 +89,7 @@ const SearchPage = () => {
               key={d.item.id}
               paragraph={d.item.paragraph}
               image={d.item.card}
-              nombre={d.item.name}
+              nombre={d.item.title}
               id={d.item.id}
             />
           ))
