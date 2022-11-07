@@ -31,12 +31,11 @@ export default function Description() {
       </div>
       <div className={style.containerComponents}>
         <Article
-          name={info.title}
+          title={info.title}
           id={info.id}
           data={description}
-          parrafo={info.parrafo}
-          galeria={info.galeria}
-          imagen="save"
+          paragraph={info.paragraph}
+          image={info.image}
         />
       </div>
       <Navbar page="Buscar" />
