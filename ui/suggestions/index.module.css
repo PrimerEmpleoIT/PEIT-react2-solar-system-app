@@ -4,9 +4,10 @@
   border-radius: 5px;
   padding: 3px 2px;
   font-family: "Roboto";
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: white;
-  background-color: #151515e9;
+  background-color: #222222;
   line-height: 1.5rem;
   cursor: pointer;
+  width: 80px;
 }
