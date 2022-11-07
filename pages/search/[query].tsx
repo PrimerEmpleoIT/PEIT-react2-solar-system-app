@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import NoResults from "../../ui/no-results";
 import dynamic from "next/dynamic";
+import { changeSaved } from "../../hooks";
 import { changeQuery } from "../../hooks";
 
 
@@ -17,6 +18,8 @@ const SearchPage = () => {
   const { query } = router.query;
   const { setQueryState } = changeQuery();
   const [data, setData] = useState([]);
+  const [cardInterest, setCardInterest] = useState([]);
+  const { savedState } = changeSaved();
   const fuse: any = new Fuse(dataBD, {
     keys: [
       { name: "name", weight: 0.3 },
@@ -43,6 +46,31 @@ const SearchPage = () => {
     }
   }, [router.isReady, query]);
 
+  useEffect(() => {
+    const interest: any = [];
+    if (sessionStorage.length > 1) {
+      for (let i = 1; i <= dataBD.length; i++) {
+        const id = sessionStorage.getItem(`dataId${i}`);
+        if (id !== null) {
+          const element = dataBD.find((el: any) => el.id == id);
+          interest.push(
+            <Card
+              key={element.id}
+              nombre={element.title}
+              paragraph={element.paragraph}
+              image={element.card}
+              id={element.id}
+            />
+          );
+          setCardInterest(interest);
+          i = dataBD.length + 1;
+        }
+      }
+    } else {
+      setCardInterest(interest);
+    }
+  }, [savedState]);
+
   return (
     <div className={style.container}>
       <div className={style.containerComponents}>
@@ -68,6 +96,7 @@ const SearchPage = () => {
         )}
 
         <p className={style.interest}>También te puede interesar</p>
+        {cardInterest}
       </div>
       <Navbar page="Buscar" />
     </div>
