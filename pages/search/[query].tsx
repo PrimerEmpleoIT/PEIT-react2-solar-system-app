@@ -3,12 +3,13 @@ import style from "./index.module.css";
 import HeaderNav from "../../components/headernav";
 import Titulo from "../../ui/title";
 import Search from "../../components/search";
-import Card from "../../components/card";
 import dataBD from "../../data/data";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import NoResults from "../../ui/no-results";
+import dynamic from "next/dynamic";
+
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
@@ -19,6 +20,15 @@ const SearchPage = () => {
       { name: "category", weight: 0.7 },
     ],
     minMatchCharLength: 1,
+  });
+
+  const Card = dynamic(() => import("../../components/card"), {
+    ssr: false,
+    loading: () => (
+      <div className={style.spinnerWrapper}>
+        <div className={style.spinner}></div>
+      </div>
+    ),
   });
 
   useEffect(() => {

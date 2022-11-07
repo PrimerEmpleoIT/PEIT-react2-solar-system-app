@@ -7,7 +7,7 @@ import { changeSaved } from "../../hooks";
 
 type cardType = {
   paragraph: string;
-  image: any;
+  image: string;
   nombre: string;
   id: number;
 };
@@ -50,19 +50,33 @@ const Card = (props: cardType): ReactElement => {
           width={175}
           height={200}
           className={style.borderImage}
+          loading="eager"
+          priority={true}
         />
       </div>
       <div className={style.rightSide}>
         <div className={style.title}>
           <h1 className={style.nameTitle}>{nombre}</h1>
           <div className={style.saveImage} onClick={handleSave}>
-            <Image src={`/images/${saved}.svg`} width={20} height={20} />
+            <Image
+              src={`/images/${saved}.svg`}
+              width={20}
+              height={20}
+              loading="eager"
+              priority={true}
+            />
           </div>
         </div>
         <p className={style.texcontinue}>{paragraph}</p>
         <div className={style.continue} onClick={handleClick}>
           <p>Continue leyendo</p>
-          <Image src={"/arrow.svg"} width={16} height={16} />
+          <Image
+            src={"/arrow.svg"}
+            width={16}
+            height={16}
+            loading="eager"
+            priority={true}
+          />
         </div>
       </div>
     </div>
