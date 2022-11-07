@@ -8,9 +8,11 @@ import dataBD from "../../data/data";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
+import { changeQuery } from "../../hooks";
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
+  const { setQueryState } = changeQuery();
   const [data, setData] = useState([]);
   const fuse: any = new Fuse(dataBD, {
     keys: [
@@ -25,6 +27,7 @@ const SearchPage = () => {
     if (query != undefined) {
       const resultFuse = fuse.search(query.toString());
       setData(resultFuse);
+      setQueryState(query.toString());
     }
   }, [router.isReady, query]);
 
@@ -43,7 +46,7 @@ const SearchPage = () => {
             key={d.item.id}
             paragraph={d.item.paragraph}
             image={d.item.card}
-            nombre={d.item.name}
+            nombre={d.item.title}
             id={d.item.id}
           />
         ))}
