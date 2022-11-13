@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-html,
 body {
   margin: 0;
   padding: 0;
@@ -22,4 +21,16 @@ body {
   font-size: 1.5rem;
   color: #6b92fd;
   text-decoration: underline;
+}
+.background-particles {
+  display: none;
+}
+@media (min-width: 950px) {
+  body {
+    background-image: none;
+    background-color: initial;
+  }
+  .background-particles {
+    display: inherit;
+  }
 }

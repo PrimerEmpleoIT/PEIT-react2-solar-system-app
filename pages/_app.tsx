@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { RecoilRoot } from "recoil";
 import "../styles/globals.css";
-
+import BackgroundParticles from "../components/background";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -15,8 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
         <meta name="description" content="Description" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="Keywords" />
-        <title>Solar System</title>
+        <title>Sistema solar</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link
@@ -34,6 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>
+        <div className={"background-particles"}>
+          <BackgroundParticles />
+        </div>
         <Component {...pageProps} />
       </RecoilRoot>
     </>

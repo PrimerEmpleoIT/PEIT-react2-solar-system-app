@@ -1,5 +1,4 @@
 .container {
-  background-image: url("../../assets/Background-menu.png");
   display: flex;
   flex-direction: column;
   height: 100vh;
