@@ -15,7 +15,7 @@ const Suggestions = (props: suggestionsType): ReactElement => {
       }}
       className={style.button}
     >
-      {name}
+      {name.slice(0, 10)}
     </button>
   );
 };

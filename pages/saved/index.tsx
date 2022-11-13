@@ -6,6 +6,7 @@ import Card from "../../components/card";
 import data from "../../data/data";
 import { useEffect, useState } from "react";
 import { changeSaved } from "../../hooks";
+import NoResults from "../../ui/no-results";
 
 const SavedPage = () => {
   const [getCards, setGetCards] = useState([]);
@@ -20,8 +21,8 @@ const SavedPage = () => {
           <Card
             key={el.id}
             nombre={el.title}
-            parrafo={el.parrafo}
-            foto={el.foto}
+            paragraph={el.paragraph}
+            image={el.card}
             id={el.id}
           />
         );
@@ -35,7 +36,11 @@ const SavedPage = () => {
       <div className={style.containerComponents}>
         <HeaderNav page={"no-title"} />
         <Title titulo={"Guardados"} color={"white"} textAlign={"left"} />
-        {getCards}
+        {getCards.length == 0 ? (
+          <NoResults title="No hay elementos guardados" />
+        ) : (
+          getCards
+        )}
       </div>
       <Navbar page={"Guardados"} />
     </div>

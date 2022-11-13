@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  overflow: hidden;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}

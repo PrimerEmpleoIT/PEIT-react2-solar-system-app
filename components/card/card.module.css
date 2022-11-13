@@ -15,6 +15,10 @@
   margin: 0;
 }
 
+.nameTitle {
+  width: 80%;
+}
+
 .leftSide {
   height: 100%;
 }
@@ -32,13 +36,14 @@
 .title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .saveImage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   width: auto;
 }
 
@@ -50,14 +55,14 @@
   margin-right: 10px;
 }
 
-.texO {
+.texcontinue {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.bor {
+.borderImage {
   border-radius: 10px 0 0 0;
   overflow: scroll;
 }

@@ -1,15 +1,9 @@
 import { ReactElement } from "react";
 import Suggestions from "../../ui/suggestions";
+import style from "./suggestions.module.css";
 const MenuSuggestions = (): ReactElement => {
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "5px",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
-      }}
-    >
+    <div className={style.container}>
       <Suggestions name="Sol" />
       <Suggestions name="Tierra" />
       <Suggestions name="Via Lactea" />

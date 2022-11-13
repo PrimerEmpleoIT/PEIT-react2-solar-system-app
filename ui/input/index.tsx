@@ -3,16 +3,16 @@ import style from "./index.module.css";
 
 type InputType = {
   placeholder: string;
-  tipo: "text" | "number" | "email";
+  type: "text" | "number" | "email";
   name: string;
 };
 
 const Input = (props: InputType): ReactElement => {
-  const { placeholder, tipo, name } = props;
+  const { placeholder, type, name } = props;
   return (
     <input
       name={name}
-      type={tipo}
+      type={type}
       placeholder={placeholder}
       className={style.input}
       required

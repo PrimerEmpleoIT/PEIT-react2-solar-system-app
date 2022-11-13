@@ -14,8 +14,8 @@ const GalleryPage = () => {
         <Card
           key={el.id}
           nombre={el.title}
-          parrafo={el.parrafo}
-          foto={el.foto}
+          paragraph={el.paragraph}
+          image={el.card}
           id={el.id}
         />
       );

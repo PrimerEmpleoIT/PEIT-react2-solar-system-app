@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { categoriesStateAtom, savedStateAtom } from "./atoms";
+import { categoriesStateAtom, queryStateAtom, savedStateAtom } from "./atoms";
 
 export function changeCategories() {
   const [categoriesState, setCategoriesState] =
@@ -10,4 +10,8 @@ export function changeCategories() {
 export function changeSaved() {
   const [savedState, setSavedState] = useRecoilState(savedStateAtom);
   return { savedState, setSavedState };
+}
+export function changeQuery() {
+  const [queryState, setQueryState] = useRecoilState(queryStateAtom);
+  return { queryState, setQueryState };
 }
