@@ -1,7 +1,6 @@
 import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 import HeaderNav from "../../components/headernav";
-import Titulo from "../../ui/title";
 import Card from "../../components/card";
 import data from "../../data/data";
 
@@ -28,8 +27,10 @@ const GalleryPage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page="no-title" />
-        <Titulo titulo="Galeria" color="white" textAlign="left" />
-        {getCards()}
+        <div className={style.containerContent}>
+          <h1 className={style.title}>GALERIA</h1>
+          <div className={style.containerCards}>{getCards()}</div>
+        </div>
       </div>
       <Navbar page="Galeria" />
     </div>
