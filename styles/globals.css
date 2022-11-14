@@ -22,9 +22,9 @@ body {
   color: #6b92fd;
   text-decoration: underline;
 }
-.background-particles {
+/* .background-particles {
   display: none;
-}
+} */
 @media (min-width: 950px) {
   body {
     background-image: none;
