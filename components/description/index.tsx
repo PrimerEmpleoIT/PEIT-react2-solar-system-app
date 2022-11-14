@@ -15,11 +15,8 @@ type ItemToggle = {
 
 export default function Article(props: ItemToggle) {
   const { id, title, data, paragraph, image } = props;
-
   const [actived, setActived] = useState(false);
-
   const [saved, setSaved] = useState("save");
-
   const { savedState, setSavedState } = changeSaved();
 
   useEffect(() => {
@@ -41,8 +38,8 @@ export default function Article(props: ItemToggle) {
   };
 
   return (
-    <div className={style.container}>
-      <div className={style.upSide}>
+    <>
+      <div className={style.planetContainer}>
         <div className={style.planet}>
           <Image src={`/${image}.png`} alt="" height={250} width={250} />
         </div>
@@ -76,6 +73,6 @@ export default function Article(props: ItemToggle) {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 }
