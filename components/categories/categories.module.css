@@ -79,3 +79,26 @@
     justify-content: space-evenly;
   }
 }
+
+@media (min-width: 950px) {
+  .category {
+    font-size: 30px;
+  }
+  .box {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .box {
+    width: 175px;
+    height: 175px;
+  }
+}

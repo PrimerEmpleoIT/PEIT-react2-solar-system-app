@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: "Roboto", "sans-serif";
 }
 
 .containerComponents {
@@ -12,11 +13,34 @@
   gap: 40px;
 }
 
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
 @media (max-width: 282px) {
   .containerComponents {
     padding: 30px 20px 100px 20px;
     display: flex;
     flex-direction: column;
     gap: 2px;
+  }
+}
+
+@media (min-width: 950px) {
+  .containerContent {
+    padding: 35px;
+    margin: 0 auto;
+    width: 70%;
+    min-height: 85vh;
+    gap: 60px;
+    border: 1px rgba(255, 255, 255, 0.149) solid;
+    border-radius: 25px;
+  }
+
+  .containerComponents {
+    padding: 30px 20px 30px 20px;
   }
 }
