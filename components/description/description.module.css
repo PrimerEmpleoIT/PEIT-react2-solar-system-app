@@ -7,12 +7,18 @@
   .planetContainer {
     background-color: initial;
     background-image: none;
+    margin-bottom: 30px;
   }
 }
 .planet {
   position: relative;
   filter: drop-shadow(0px 12px 24px rgba(22, 21, 21, 0.552));
   top: 25px;
+}
+@media (min-width: 950px) {
+  .planet {
+    top: 65px;
+  }
 }
 .midleContent {
   display: flex;
