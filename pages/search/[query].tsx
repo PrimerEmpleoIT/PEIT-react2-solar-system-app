@@ -1,7 +1,6 @@
 import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 import HeaderNav from "../../components/headernav";
-import Titulo from "../../ui/title";
 import Search from "../../components/search";
 import dataBD from "../../data/data";
 import { useRouter } from "next/router";
@@ -12,13 +11,13 @@ import dynamic from "next/dynamic";
 import { changeSaved } from "../../hooks";
 import { changeQuery } from "../../hooks";
 
-
 const SearchPage = () => {
   const router = useRouter();
   const { query } = router.query;
   const { setQueryState } = changeQuery();
   const [data, setData] = useState([]);
   const [cardInterest, setCardInterest] = useState([]);
+  const [interestComp, setInterestComp] = useState(false);
   const { savedState } = changeSaved();
   const fuse: any = new Fuse(dataBD, {
     keys: [
@@ -63,11 +62,13 @@ const SearchPage = () => {
             />
           );
           setCardInterest(interest);
+          setInterestComp(true);
           i = dataBD.length + 1;
         }
       }
     } else {
       setCardInterest(interest);
+      setInterestComp(false);
     }
   }, [savedState]);
 
@@ -75,28 +76,35 @@ const SearchPage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page="no-title" />
-        <Titulo
-          titulo="Resultados de la búsqueda"
-          color="white"
-          textAlign="left"
-        />
-        <Search />
-        {data.length == 0 ? (
-          <NoResults title="No se encontraron resultados" />
-        ) : (
-          data.map((d: any) => (
-            <Card
-              key={d.item.id}
-              paragraph={d.item.paragraph}
-              image={d.item.card}
-              nombre={d.item.title}
-              id={d.item.id}
-            />
-          ))
-        )}
-
-        <p className={style.interest}>También te puede interesar</p>
-        {cardInterest}
+        <div className={style.containerContent}>
+          <div className={style.searchContent}>
+            <h1 className={style.title}>REALICE SU BUSQUEDA</h1>
+            <Search />
+          </div>
+          <div className={style.containerCards}>
+            {data.length == 0 ? (
+              <NoResults title="No se encontraron resultados" />
+            ) : (
+              data.map((d: any) => (
+                <Card
+                  key={d.item.id}
+                  paragraph={d.item.paragraph}
+                  image={d.item.card}
+                  nombre={d.item.title}
+                  id={d.item.id}
+                />
+              ))
+            )}
+          </div>
+          {interestComp ? (
+            <div className={style.interestComponents}>
+              <p className={style.interest}>También te puede interesar</p>
+              <div className={style.containerCards}>{cardInterest}</div>
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
       </div>
       <Navbar page="Buscar" />
     </div>

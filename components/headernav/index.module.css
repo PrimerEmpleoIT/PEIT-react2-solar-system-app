@@ -2,7 +2,6 @@
   height: auto;
   width: 100%;
   display: flex;
-  align-items: center;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -93,4 +92,54 @@
 .settingsChangeName:hover,
 .settingsClose:hover {
   background-color: rgba(9, 30, 66, 0.04);
+}
+
+.containerUl {
+  display: none;
+}
+
+@media (min-width: 950px) {
+  .headerContainer h1 {
+    font-size: 35px;
+  }
+  .headerContainer p {
+    font-size: 22px;
+  }
+  .rightSide {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .containerUl {
+    padding: 0;
+    margin: 0 15px 0 0;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  .liContainer a {
+    text-decoration: none;
+    color: white;
+  }
+  .liContainer a:hover {
+    transition: 0.5s;
+    background-image: linear-gradient(60deg, #ff6cd9, #ff2184);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .leftSide {
+    width: 535px;
+  }
+  .leftSideBack {
+    width: 535px;
+    text-align: start;
+  }
+  .backCursor {
+    cursor: pointer;
+  }
 }

@@ -1,6 +1,5 @@
 import HeaderNav from "../../components/headernav";
 import Navbar from "../../components/navbar";
-import Title from "../../ui/title";
 import style from "./index.module.css";
 import Card from "../../components/card";
 import data from "../../data/data";
@@ -35,12 +34,16 @@ const SavedPage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page={"no-title"} />
-        <Title titulo={"Guardados"} color={"white"} textAlign={"left"} />
-        {getCards.length == 0 ? (
-          <NoResults title="No hay elementos guardados" />
-        ) : (
-          getCards
-        )}
+        <div className={style.containerContent}>
+          <h1 className={style.title}>GUARDADOS</h1>
+          <div className={style.containerCards}>
+            {getCards.length == 0 ? (
+              <NoResults title="No hay elementos guardados" />
+            ) : (
+              getCards
+            )}
+          </div>
+        </div>
       </div>
       <Navbar page={"Guardados"} />
     </div>

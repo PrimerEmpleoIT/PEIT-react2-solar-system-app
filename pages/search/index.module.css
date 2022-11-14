@@ -1,10 +1,10 @@
 .container {
-  background-image: url("../../assets/Background-menu.png");
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  font-family: "Roboto", "sans-serif";
 }
 
 .containerComponents {
@@ -15,11 +15,45 @@
   width: 100%;
 }
 
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.interestComponents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .interest {
   color: white;
   text-align: left;
   padding: 0;
   margin: 0;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 35px;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.containerCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.searchContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .spinnerWrapper {
@@ -80,5 +114,48 @@
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+@media (min-width: 950px) {
+  .containerComponents {
+    padding: 30px 20px 30px 20px;
+  }
+
+  .containerContent {
+    padding: 35px;
+    margin: 0 auto;
+    width: 70%;
+    min-height: 85vh;
+    gap: 70px;
+    border: 1px rgba(255, 255, 255, 0.149) solid;
+    border-radius: 25px;
+    align-items: center;
+  }
+
+  .searchContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .containerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 45px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .interest {
+    text-align: center;
+    font-size: 22px;
   }
 }

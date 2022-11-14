@@ -45,12 +45,45 @@ const HeaderNav = (props: HeaderType): ReactElement => {
           <p>¿Qué aprenderás hoy?</p>
         </div>
       ) : (
-        <div onClick={() => Router.back()}>
-          <Image src="/images/back.svg" width={25} height={25} />
+        <div className={style.leftSideBack} onClick={() => Router.back()}>
+          <Image
+            src="/images/back.svg"
+            width={25}
+            height={25}
+            className={style.backCursor}
+          />
         </div>
       )}
-      <div className={style.rightSide} onClick={handleClick}>
-        <Image src="/images/settings.svg" width={25} height={25} />
+      <div className={style.rightSide}>
+        <ul className={style.containerUl}>
+          <li className={style.liContainer}>
+            <Link href={"/homepage"}>
+              <a>INICIO</a>
+            </Link>
+          </li>
+          <li className={style.liContainer}>
+            <Link href={"/search"}>
+              <a>BUSCAR</a>
+            </Link>
+          </li>
+          <li className={style.liContainer}>
+            <Link href={"/saved"}>
+              <a>GUARDADOS</a>
+            </Link>
+          </li>
+          <li className={style.liContainer}>
+            <Link href={"/gallery"}>
+              <a>GALERIA</a>
+            </Link>
+          </li>
+        </ul>
+        <Image
+          src="/images/settings.svg"
+          width={25}
+          height={25}
+          onClick={handleClick}
+          className={style.backCursor}
+        />
       </div>
       <div
         className={style.settingsContainer}

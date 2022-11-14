@@ -1,7 +1,6 @@
 .share_options {
   position: absolute;
   right: 15%;
-  width: 70%;
   height: auto;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -13,7 +12,31 @@
   flex-direction: column;
   gap: 15px;
 }
-
+@media (min-width: 800px) {
+  .share_options {
+    right: 12%;
+  }
+}
+@media (min-width: 800px) {
+  .share_options {
+    right: 10%;
+  }
+}
+@media (min-width: 1250px) {
+  .share_options {
+    right: 15%;
+  }
+}
+@media (min-width: 1450px) {
+  .share_options {
+    right: 20%;
+  }
+}
+@media (min-width: 1550px) {
+  .share_options {
+    right: 26%;
+  }
+}
 .title {
   font-size: 20px;
   text-transform: capitalize;

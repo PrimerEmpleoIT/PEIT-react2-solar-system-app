@@ -1,5 +1,7 @@
 .container {
   background-image: url("../../assets/Background.png");
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -15,11 +17,15 @@
 .buttonContainer {
   width: 206px;
 }
-
 .span {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
   display: block;
+}
+@media (min-width: 430px) {
+  .container {
+    background-image: none;
+  }
 }
