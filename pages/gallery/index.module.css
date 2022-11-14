@@ -36,6 +36,9 @@
 }
 
 @media (min-width: 950px) {
+  .containerComponents {
+    padding: 30px 20px 30px 20px;
+  }
   .containerCards {
     display: flex;
     flex-direction: row;
