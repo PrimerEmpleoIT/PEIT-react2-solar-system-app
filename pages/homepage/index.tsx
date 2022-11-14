@@ -10,9 +10,11 @@ const HomePage = () => {
     <div className={style.container}>
       <div className={style.containerComponents}>
         <HeaderNav page="homepage" />
-        <Search />
-        <Categories />
-        <Carousel />
+        <div className={style.containerContent}>
+          <Search />
+          <Categories />
+          <Carousel />
+        </div>
       </div>
       <Navbar page="Inicio" />
     </div>
