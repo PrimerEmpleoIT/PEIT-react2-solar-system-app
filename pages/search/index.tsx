@@ -13,12 +13,6 @@ const SearchPage = () => {
   const { savedState } = changeSaved();
   const [interestComp, setInterestComp] = useState(false);
 
-  {
-    /* <div className={style.spinnerWrapper}>
-        <div className={style.spinner}></div>
-      </div> */
-  }
-
   useEffect(() => {
     const interest: any = [];
     if (sessionStorage.length > 1) {
