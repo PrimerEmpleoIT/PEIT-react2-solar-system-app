@@ -6,21 +6,18 @@ import NoResults from "../../ui/no-results";
 import { changeSaved } from "../../hooks";
 import { useEffect, useState } from "react";
 import dataBD from "../../data/data";
-import dynamic from "next/dynamic";
+import Card from "../../components/card";
 
 const SearchPage = () => {
   const [cardInterest, setCardInterest] = useState([]);
   const { savedState } = changeSaved();
   const [interestComp, setInterestComp] = useState(false);
 
-  const Card = dynamic(() => import("../../components/card"), {
-    ssr: false,
-    loading: () => (
-      <div className={style.spinnerWrapper}>
+  {
+    /* <div className={style.spinnerWrapper}>
         <div className={style.spinner}></div>
-      </div>
-    ),
-  });
+      </div> */
+  }
 
   useEffect(() => {
     const interest: any = [];

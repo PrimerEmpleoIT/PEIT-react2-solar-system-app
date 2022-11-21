@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import NoResults from "../../ui/no-results";
-import dynamic from "next/dynamic";
+import Card from "../../components/card";
 import { changeSaved } from "../../hooks";
 import { changeQuery } from "../../hooks";
 
@@ -25,15 +25,6 @@ const SearchPage = () => {
       { name: "category", weight: 0.7 },
     ],
     minMatchCharLength: 1,
-  });
-
-  const Card = dynamic(() => import("../../components/card"), {
-    ssr: false,
-    loading: () => (
-      <div className={style.spinnerWrapper}>
-        <div className={style.spinner}></div>
-      </div>
-    ),
   });
 
   useEffect(() => {
