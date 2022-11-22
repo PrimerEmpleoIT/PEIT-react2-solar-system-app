@@ -2,32 +2,35 @@ import HeaderNav from "../../components/headernav";
 import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 import Card from "../../components/card";
-import data from "../../data/data";
 import { useEffect, useState } from "react";
 import { changeSaved } from "../../hooks";
 import NoResults from "../../ui/no-results";
-
+import useContentful from "../../data/useContentful";
 const SavedPage = () => {
   const [getCards, setGetCards] = useState([]);
+  const { getSolarSystem } = useContentful();
   const { savedState } = changeSaved();
+
   useEffect(() => {
     const cards: any = [];
-    for (let i = 0; i <= data.length; i++) {
-      const resultado = sessionStorage.getItem(`dataId${i}`);
-      if (resultado !== null) {
-        const el = data.find((el: any) => el.id == resultado);
-        cards.push(
-          <Card
-            key={el.id}
-            nombre={el.title}
-            paragraph={el.paragraph}
-            image={el.card}
-            id={el.id}
-          />
-        );
+    getSolarSystem().then((res: any) => {
+      for (let i = 0; i <= res.length; i++) {
+        const resultado = sessionStorage.getItem(`dataId${i}`);
+        if (resultado !== null) {
+          const el: any = res.find((el: any) => el.id == resultado);
+          cards.push(
+            <Card
+              key={el.id}
+              nombre={el.title}
+              paragraph={el.paragraph}
+              image={"https:" + el.imageCard.fields.file.url}
+              id={el.id}
+            />
+          );
+        }
       }
-    }
-    setGetCards(cards);
+      setGetCards(cards);
+    });
   }, [savedState]);
 
   return (

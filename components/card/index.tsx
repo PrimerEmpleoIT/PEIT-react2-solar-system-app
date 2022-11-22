@@ -2,8 +2,8 @@ import { ReactElement, useEffect, useState } from "react";
 import style from "./card.module.css";
 import Image from "next/image";
 import Router from "next/router";
-import data from "../../data/data";
 import { changeSaved } from "../../hooks";
+import useContentful from "../../data/useContentful";
 
 type cardType = {
   paragraph: string;
@@ -13,15 +13,20 @@ type cardType = {
 };
 
 const Card = (props: cardType): ReactElement => {
+  const [solarSystemData, getSolarSystemData] = useState([]);
+  const { getSolarSystem } = useContentful();
+  useEffect(() => {
+    getSolarSystem().then((res: any) => {
+      getSolarSystemData(res);
+    });
+  }, []);
   const { paragraph, image, nombre, id } = props;
-
   const [saved, setSaved] = useState("save");
-
   const { savedState, setSavedState } = changeSaved();
 
   useEffect(() => {
     if (sessionStorage.length > 1) {
-      for (let i = 1; i < data.length; i++) {
+      for (let i = 1; i < solarSystemData.length; i++) {
         if (sessionStorage.hasOwnProperty(`dataId${id}`)) {
           setSaved("saved");
         }
@@ -45,7 +50,7 @@ const Card = (props: cardType): ReactElement => {
     <div className={style.cardContainer}>
       <div className={style.leftSide}>
         <Image
-          src={`/${image}.png`}
+          src={image}
           alt=""
           width={175}
           height={200}

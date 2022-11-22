@@ -16,7 +16,7 @@ const MiniCard = (props: UniversoType) => {
     <div className={style.container}>
       <span className={style.spanImage}>
         <Image
-          src={"/" + image + ".png"}
+          src={image}
           alt=""
           width={110}
           height={134}

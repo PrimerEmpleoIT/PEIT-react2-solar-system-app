@@ -41,7 +41,7 @@ export default function Article(props: ItemToggle) {
     <>
       <div className={style.planetContainer}>
         <div className={style.planet}>
-          <Image src={`/${image}.png`} alt="" height={250} width={250} />
+          <Image src={image} alt="" height={250} width={250} />
         </div>
       </div>
       <div className={style.midleContent}>

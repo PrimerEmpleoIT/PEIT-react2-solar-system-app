@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-slick": "^0.23.10",
+    "contentful": "^9.2.12",
     "fuse.js": "^6.6.2",
     "jquery": "^3.6.1",
     "next": "12.3.1",
@@ -20,6 +21,7 @@
     "react-slick": "^0.29.0",
     "react-tsparticles": "^2.5.1",
     "recoil": "^0.7.6",
+    "sharp": "^0.31.2",
     "slick-carousel": "^1.8.1",
     "tsparticles": "^2.5.1"
   },

@@ -1,17 +1,14 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-
   width: 75px;
   height: 75px;
-  /* Gradient / Blue */
-
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: px;
@@ -20,18 +17,11 @@
   /* Categorias */
   width: 78px;
   height: 19px;
-
-  /* Regular / 16px */
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  /* identical to box height */
-
-  /* Brand / White */
-
   color: #ffffff;
 }
 
@@ -40,8 +30,6 @@
 }
 
 .title {
-  /* Regular / 14px */
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -49,8 +37,6 @@
   line-height: 16px;
   text-align: center;
   margin: 5px;
-  /* Brand / White */
-
   color: #ffffff;
 }
 
@@ -82,7 +68,7 @@
 
 @media (min-width: 950px) {
   .category {
-    font-size: 30px;
+    font-size: 35px;
   }
   .box {
     width: 125px;
@@ -98,7 +84,10 @@
 
 @media (min-width: 1300px) {
   .box {
-    width: 175px;
-    height: 175px;
+    width: 165px;
+    height: 165px;
+  }
+  .title {
+    font-size: 30px;
   }
 }
