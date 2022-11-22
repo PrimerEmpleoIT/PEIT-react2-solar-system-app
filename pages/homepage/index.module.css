@@ -28,7 +28,14 @@
     gap: 2px;
   }
 }
-
+@media (min-width: 650px) {
+  .containerComponents {
+    padding: 30px 60px 100px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 @media (min-width: 950px) {
   .containerContent {
     padding: 35px;
