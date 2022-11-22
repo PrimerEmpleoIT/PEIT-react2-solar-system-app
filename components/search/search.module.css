@@ -36,3 +36,8 @@
   border: none;
   padding: 0;
 }
+@media (min-width: 1300px) {
+  .search {
+    width: 95%;
+  }
+}

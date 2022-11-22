@@ -1,7 +1,6 @@
 import style from "./categories.module.css";
 import Image from "next/image";
 import { changeCategories } from "../../hooks";
-import { useState } from "react";
 type boxType = {
   name: string;
   categorySvg: string;

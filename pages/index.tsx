@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     }
     //Si no existe será siempre false y direcciona a WelcomePage
   }, []);
-  return <>{ifName ? <HomePage /> : <WelcomePage />} ;</>;
+  return <>{ifName ? <HomePage /> : <WelcomePage />} </>;
 };
 
 export default Home;
