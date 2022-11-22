@@ -4,13 +4,21 @@ import style from "./index.module.css";
 import Titulo from "../../ui/title";
 import Router from "next/router";
 import Link from "next/link";
-import data from "../../data/data";
+import useContentful from "../../data/useContentful";
 
 type HeaderType = {
   page: "homepage" | "no-title";
 };
 
 const HeaderNav = (props: HeaderType): ReactElement => {
+  const [solarSystemData, getSolarSystemData] = useState([]);
+  const { getSolarSystem } = useContentful();
+  useEffect(() => {
+    getSolarSystem().then((res: any) => {
+      getSolarSystemData(res);
+    });
+  }, []);
+
   const { page } = props;
   const [fullname, setFullname] = useState("");
   useEffect(() => {
@@ -27,7 +35,7 @@ const HeaderNav = (props: HeaderType): ReactElement => {
   };
   const signOff = () => {
     sessionStorage.removeItem("fullname");
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < solarSystemData.length; i++) {
       sessionStorage.removeItem(`dataId${i}`);
     }
     Router.push("/");

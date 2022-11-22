@@ -2,26 +2,17 @@ import Navbar from "../../components/navbar";
 import style from "./index.module.css";
 import HeaderNav from "../../components/headernav";
 import Card from "../../components/card";
-import data from "../../data/data";
+import useContentful from "../../data/useContentful";
+import { useEffect, useState } from "react";
 
 const GalleryPage = () => {
-  const getCards: any = () => {
-    const cards: any = [];
-
-    data.forEach((el: any) => {
-      cards.push(
-        <Card
-          key={el.id}
-          nombre={el.title}
-          paragraph={el.paragraph}
-          image={el.card}
-          id={el.id}
-        />
-      );
+  const [solarSystemData, getSolarSystemData] = useState([]);
+  const { getSolarSystem } = useContentful();
+  useEffect(() => {
+    getSolarSystem().then((res: any) => {
+      getSolarSystemData(res);
     });
-
-    return cards;
-  };
+  }, []);
 
   return (
     <div className={style.container}>
@@ -29,7 +20,17 @@ const GalleryPage = () => {
         <HeaderNav page="no-title" />
         <div className={style.containerContent}>
           <h1 className={style.title}>GALERIA</h1>
-          <div className={style.containerCards}>{getCards()}</div>
+          <div className={style.containerCards}>
+            {solarSystemData.map((el: any) => (
+              <Card
+                key={el.id}
+                nombre={el.title}
+                paragraph={el.paragraph}
+                image={"https:" + el.imageCard.fields.file.url}
+                id={el.id}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <Navbar page="Galeria" />
