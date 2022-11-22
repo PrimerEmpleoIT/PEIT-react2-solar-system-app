@@ -6,7 +6,6 @@ import BackgroundParticles from "../components/background";
 import Router from "next/router";
 import { useState } from "react";
 import Spinner from "../ui/spinner";
-
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/favicon.ico" />
           <meta name="keywords" content="Keywords" />
           <title>Sistema solar</title>
-
           <link rel="manifest" href="/manifest.json" />
           <link
             href="/icons/favicon-16x16.png"
