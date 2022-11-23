@@ -1,8 +1,8 @@
 import { createClient } from "contentful";
 const useContentful = () => {
   const client = createClient({
-    space: `pkn4w8tbsfj6`,
-    accessToken: `v_vruSodEn5MVeFZOtDnunnRR9NAgMXLdIikcfm2wAU`,
+    space: `${process.env.NEXT_PUBLIC_SPACE_CONTENTFUL}`,
+    accessToken: `${process.env.NEXT_PUBLIC_APIKEY_CONTENTFUL}`,
     host: "cdn.contentful.com",
   });
   const getSolarSystem = async () => {
